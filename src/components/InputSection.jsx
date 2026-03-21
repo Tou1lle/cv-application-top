@@ -1,21 +1,16 @@
+import { Input } from "./Input"
+
 export default function InputSection({type, extendable = false, onUpdate}) {
   if (type === "general") {
     return (
       <section>
         <h2>General Information</h2>
         <section>
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="first-name"/>
-          </div>
-          <div>
-            <label htmlFor="surname">Surname:</label>
-            <input type="text" id="surname"/>
-          </div>
-          <div>
-            <label htmlFor="birthday">Birthday</label>
-            <input type="date" id="birthday"/>
-          </div>
+          <Input type="text" id="first-name" label="First Name"/>
+          <Input type="text" id="surname" label="Surname"/>
+          <Input type="date" id="birthday" label="Birthday"/>
+          <Input type="email" id="email" label="Email"/>
+          <Input type="tel" id="phone" label="Phone"/>
         </section>
         <button>Update</button>
       </section>
