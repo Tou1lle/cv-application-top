@@ -1,3 +1,8 @@
+import { useState } from "react"
+import InputSection from "./InputSection"
+
 export default function App() {
-  return <h1>CV Application - TOP</h1>
+  return (
+    <InputSection type="general"></InputSection>
+  )
 }
