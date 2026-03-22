@@ -18,6 +18,6 @@ export default function App() {
   }
 
   return (
-    <InputSection type="general" onUpdate={"handleUpdate"}></InputSection>
+    <InputSection type="general" data={generalData} onChange={handleGeneralUpdate}></InputSection>
   )
 }
