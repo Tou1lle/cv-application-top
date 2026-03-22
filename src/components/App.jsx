@@ -4,7 +4,7 @@ import InputSection from "./InputSection"
 export default function App() {
   const [generalData, setGeneralData] = useState({
     firstName: "",
-    surName: "",
+    lastName: "",
     birthday: "",
     phone: "",
     email: ""
@@ -18,6 +18,9 @@ export default function App() {
   }
 
   return (
-    <InputSection type="general" data={generalData} onChange={handleGeneralUpdate}></InputSection>
+    <>
+      <InputSection type="general" data={generalData} onChange={handleGeneralUpdate}></InputSection>
+      {console.log("updated data:" + JSON.stringify(generalData))}
+    </>
   )
 }
