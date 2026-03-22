@@ -1,8 +1,11 @@
-function Input({type, id, label, value, onChange}) {
+function Input({type, id, htmlID, label, value, onChange, level}) {
   return (
     <div>
-      <label htmlFor={id}>{label}:</label>
-      <input type={type} value={value} id={id} onChange={(e) => onChange(e.target.value, id)}/>
+      <label htmlFor={htmlID}>{label}:</label>
+      <input type={type} 
+             value={value} 
+             id={htmlID} 
+             onChange={(e) => onChange(e.target.value, id, level)}/>
     </div>
   )
 }
