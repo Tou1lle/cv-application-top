@@ -5,7 +5,12 @@ function Input({type, id, htmlID, label, value, onChange, level}) {
       <input type={type} 
              value={value} 
              id={htmlID} 
-             onChange={(e) => onChange(e.target.value, id, level)}/>
+             onChange={(e) => {
+              let value = e.target.value;
+              if (e.target.type === "date") {
+                value = new Date(e.target.value)
+              } 
+              onChange(value, id, level)}}/>
     </div>
   )
 }

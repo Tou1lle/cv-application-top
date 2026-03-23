@@ -25,8 +25,10 @@ export default function App() {
     }
   ]);
 
+  const [workData, setWorkData] = useState([]);
+
   function handleGeneralUpdate(value, id) {
-        setGeneralData({
+    setGeneralData({
       ...generalData,
       [id]: value
     })
@@ -40,6 +42,19 @@ export default function App() {
         return school;
       }
     }))
+  }
+
+  function handleAddWork() {
+    setWorkData([
+      ...educationData,
+      {
+        id: crypto.randomUUID(),
+        name: "",
+        description: "",
+        startDate: "",
+        endDate: ""
+      }
+    ])
   }
 
   return (

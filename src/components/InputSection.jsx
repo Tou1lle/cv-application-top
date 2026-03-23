@@ -1,4 +1,5 @@
 import { Input } from "./Input"
+import { format } from "date-fns"
 
 export default function InputSection({type, data, onChange}) {
 
@@ -26,7 +27,7 @@ export default function InputSection({type, data, onChange}) {
               id="birthday" 
               htmlID="birthday" 
               label="Birthday" 
-              value={data.birthday} 
+              value={data.birthday && format(data.birthday, "yyyy-MM-dd")} 
               onChange={onChange}/>
             <Input 
               type="email" 
