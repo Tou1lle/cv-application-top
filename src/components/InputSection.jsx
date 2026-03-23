@@ -1,7 +1,7 @@
 import { Input } from "./Input"
 import { format } from "date-fns"
 
-export default function InputSection({type, data, onChange}) {
+export default function InputSection({type, data, onChange, onAdd}) {
 
   if (type === "general") {
     return (
@@ -73,6 +73,20 @@ export default function InputSection({type, data, onChange}) {
               level={school.level}/>
           </div>
         ))}
+      </section>
+    )
+  }
+
+  if (type === "work") {
+    return (
+      <section>
+        <h2>Work Experience</h2>
+        {data.map(work => (
+          <div key={work.id}>
+            {work.id}
+          </div>
+        ))}
+        <button onClick={onAdd}>Add Work Experience</button>
       </section>
     )
   }

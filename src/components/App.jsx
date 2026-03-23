@@ -44,9 +44,13 @@ export default function App() {
     }))
   }
 
+  function handleWorkUpdate() {
+    //ADD CODE
+  }
+
   function handleAddWork() {
     setWorkData([
-      ...educationData,
+      ...workData,
       {
         id: crypto.randomUUID(),
         name: "",
@@ -62,8 +66,10 @@ export default function App() {
       <section>
         <InputSection type="general" data={generalData} onChange={handleGeneralUpdate} />
         <InputSection type="education" data={educationData} onChange={handleEducationUpdate} />
+        <InputSection type="work" data={workData} onChange={handleWorkUpdate} onAdd={handleAddWork} />
         {console.log("updated data:" + JSON.stringify(generalData))}
         {console.table(educationData)}
+        {console.table(workData)}
       </section>
     </>
   )
