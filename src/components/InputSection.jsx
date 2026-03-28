@@ -81,9 +81,34 @@ export default function InputSection({type, data, onChange, onAdd}) {
     return (
       <section>
         <h2>Work Experience</h2>
-        {data.map(work => (
+        {data.map((work, id) => (
           <div key={work.id}>
-            {work.id}
+            <h3>Practical Experience {id + 1}</h3>
+            <Input
+              workID={work.id}
+              type="text"
+              id="name"
+              htmlID="work-name"
+              label="Company Name"
+              value={work.name}
+              onChange={onChange}/>
+            <textarea name="work-description" id="description" value={work.description}></textarea>
+            <Input
+              workID={work.id}
+              type="date" 
+              id="startDate"
+              htmlID="work-start-date" 
+              label="Starting Date" 
+              value={work.startDate && format(work.startDate, "yyyy-MM-dd")} 
+              onChange={onChange}/>
+            <Input
+              workID={work.id}
+              type="date" 
+              id="endDate" 
+              htmlID="work-end-date" 
+              label="Ending date" 
+              value={work.endDate && format(work.endDate, "yyyy-MM-dd")} 
+              onChange={onChange}/>
           </div>
         ))}
         <button onClick={onAdd}>Add Work Experience</button>

@@ -44,7 +44,7 @@ export default function App() {
     }))
   }
 
-  function handleWorkUpdate() {
+  function handleWorkUpdate(value, id, level, workID) {
     //ADD CODE
   }
 

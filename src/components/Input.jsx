@@ -1,8 +1,8 @@
-function Input({type, id, htmlID, label, value, onChange, level}) {
+function Input({type, id, htmlID, label, value, onChange, level, workID}) {
   return (
     <div>
       <label htmlFor={htmlID}>{label}:</label>
-      <input type={type} 
+      <input type={type}
              value={value} 
              id={htmlID} 
              onChange={(e) => {
@@ -10,7 +10,7 @@ function Input({type, id, htmlID, label, value, onChange, level}) {
               if (e.target.type === "date") {
                 value = new Date(e.target.value)
               } 
-              onChange(value, id, level)}}/>
+              onChange(value, id, level, workID)}}/>
     </div>
   )
 }
