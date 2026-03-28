@@ -45,7 +45,13 @@ export default function App() {
   }
 
   function handleWorkUpdate(value, id, level, workID) {
-    //ADD CODE
+    setWorkData(workData.map(work => {
+      if (work.id === workID) {
+        return {...work, [id]: value}
+      } else {
+        return work;
+      }
+    }))
   }
 
   function handleAddWork() {

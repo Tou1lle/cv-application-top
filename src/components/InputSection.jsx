@@ -88,16 +88,16 @@ export default function InputSection({type, data, onChange, onAdd}) {
               workID={work.id}
               type="text"
               id="name"
-              htmlID="work-name"
+              htmlID={"work-name" + work.id}
               label="Company Name"
               value={work.name}
               onChange={onChange}/>
-            <textarea name="work-description" id="description" value={work.description}></textarea>
+            <textarea name="work-description" id={"description" + work.id} value={work.description} onChange={e => onChange(e.target.value, "description", null, work.id)}></textarea>
             <Input
               workID={work.id}
               type="date" 
               id="startDate"
-              htmlID="work-start-date" 
+              htmlID={"work-start-date" + work.id} 
               label="Starting Date" 
               value={work.startDate && format(work.startDate, "yyyy-MM-dd")} 
               onChange={onChange}/>
@@ -105,7 +105,7 @@ export default function InputSection({type, data, onChange, onAdd}) {
               workID={work.id}
               type="date" 
               id="endDate" 
-              htmlID="work-end-date" 
+              htmlID={"work-end-date" + work.id}
               label="Ending date" 
               value={work.endDate && format(work.endDate, "yyyy-MM-dd")} 
               onChange={onChange}/>
