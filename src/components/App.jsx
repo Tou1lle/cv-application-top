@@ -1,6 +1,6 @@
 import { useState } from "react"
 import InputSection from "./InputSection"
-import { format } from "date-fns"
+import { GeneralInfo } from "./CVSection"
 
 export default function App() {
   const [generalData, setGeneralData] = useState({
@@ -80,12 +80,7 @@ export default function App() {
       </div>
       <div className="right-side">
         <section>
-          <h2>General information</h2>
-          <p>{generalData.firstName}</p>
-          <p>{generalData.lastName}</p>
-          <p>{format(generalData.birthday, "yyyy-MM-dd")}</p>
-          <p>{generalData.phone}</p>
-          <p>{generalData.email}</p>
+          <GeneralInfo data={generalData}/>
         </section>
       </div>
     </>
