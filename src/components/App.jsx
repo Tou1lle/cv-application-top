@@ -1,5 +1,6 @@
 import { useState } from "react"
 import InputSection from "./InputSection"
+import { format } from "date-fns"
 
 export default function App() {
   const [generalData, setGeneralData] = useState({
@@ -69,14 +70,24 @@ export default function App() {
 
   return (
     <>
-      <section>
+      <div className="left-side">
         <InputSection type="general" data={generalData} onChange={handleGeneralUpdate} />
         <InputSection type="education" data={educationData} onChange={handleEducationUpdate} />
         <InputSection type="work" data={workData} onChange={handleWorkUpdate} onAdd={handleAddWork} />
         {console.log("updated data:" + JSON.stringify(generalData))}
         {console.table(educationData)}
         {console.table(workData)}
-      </section>
+      </div>
+      <div className="right-side">
+        <section>
+          <h2>General information</h2>
+          <p>{generalData.firstName}</p>
+          <p>{generalData.lastName}</p>
+          <p>{format(generalData.birthday, "yyyy-MM-dd")}</p>
+          <p>{generalData.phone}</p>
+          <p>{generalData.email}</p>
+        </section>
+      </div>
     </>
   )
 }
