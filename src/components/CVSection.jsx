@@ -15,4 +15,21 @@ function GeneralInfo({data}) {
   )
 }
 
-export { GeneralInfo };
+function EducationInfo({data}) {
+  return (
+    <section>
+      <h2>Education</h2>
+      <div>
+        {data.map(school => (
+          <div>
+            <h3>{school.level === "highschool" ? "Highschool" : "University"}</h3>
+            <p><span>School Name:</span> {school.name}</p>
+            <p><span>Specialization:</span> {school.specialization}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+export { GeneralInfo, EducationInfo };

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import InputSection from "./InputSection"
-import { GeneralInfo } from "./CVSection"
+import { GeneralInfo, EducationInfo } from "./CVSection"
 
 export default function App() {
   const [generalData, setGeneralData] = useState({
@@ -81,6 +81,7 @@ export default function App() {
       <div className="right-side">
         <section>
           <GeneralInfo data={generalData}/>
+          <EducationInfo data={educationData} />
         </section>
       </div>
     </>
