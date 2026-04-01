@@ -39,7 +39,12 @@ function WorkInfo({data}) {
       <div>
         {data.map(work => (
           <div>
-            
+            <div>
+              <h3>{work.name}</h3>
+              <p>{work.location}</p>
+            </div>
+            <p>From {work.startDate ? format(work.startDate, "LLL/yyyy") : ""} To {work.endDate ? format(work.endDate, "LLL/yyyy") : ""}</p>
+            <p>{work.description}</p>
           </div>
         ))}
       </div>
