@@ -1,6 +1,6 @@
 import { useState } from "react"
 import InputSection from "./InputSection"
-import { GeneralInfo, EducationInfo } from "./CVSection"
+import { GeneralInfo, EducationInfo, WorkInfo } from "./CVSection"
 
 export default function App() {
   const [generalData, setGeneralData] = useState({
@@ -61,6 +61,7 @@ export default function App() {
       {
         id: crypto.randomUUID(),
         name: "",
+        location: "",
         description: "",
         startDate: "",
         endDate: ""
@@ -82,6 +83,7 @@ export default function App() {
         <section>
           <GeneralInfo data={generalData}/>
           <EducationInfo data={educationData} />
+          <WorkInfo data={workData} />
         </section>
       </div>
     </>

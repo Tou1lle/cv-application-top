@@ -92,6 +92,15 @@ export default function InputSection({type, data, onChange, onAdd}) {
               label="Company Name"
               value={work.name}
               onChange={onChange}/>
+            <Input 
+              workID={work.id}
+              type="text"
+              id="location"
+              htmlID={"work-location" + work.id}
+              label="Work Location"
+              value={work.location}
+              onChange={onChange}
+            />
             <textarea name="work-description" id={"description" + work.id} value={work.description} onChange={e => onChange(e.target.value, "description", null, work.id)}></textarea>
             <Input
               workID={work.id}

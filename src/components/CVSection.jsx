@@ -32,4 +32,19 @@ function EducationInfo({data}) {
   )
 }
 
-export { GeneralInfo, EducationInfo };
+function WorkInfo({data}) {
+  return (
+    <section>
+      <h2>Work Experience</h2>
+      <div>
+        {data.map(work => (
+          <div>
+            
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+export { GeneralInfo, EducationInfo, WorkInfo };
