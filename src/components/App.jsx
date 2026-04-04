@@ -1,6 +1,7 @@
 import { useState } from "react"
 import InputSection from "./InputSection"
 import { GeneralInfo, EducationInfo, WorkInfo } from "./CVSection"
+import "./../styles/App.css"
 
 export default function App() {
   const [generalData, setGeneralData] = useState({
