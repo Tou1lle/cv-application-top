@@ -5,16 +5,33 @@
   padding: 0;
 }
 
+:root {
+  --section-bg: #EAEFEF;
+  --section-heading-bg: #00BBFF;
+}
+
+/* Whole page */
 #root {
   min-height: 100vh;
   display: flex;
 }
 
+/* Left side - inputs */
 .left-side {
   max-width: 500px;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
 }
 
+.left-side section {
+  background-color: var(--section-bg);
+  border-radius: 10px;
+}
+
+/* Right side - CV */
 .right-side {
   flex: 1;
 }
