@@ -8,12 +8,14 @@
 :root {
   --section-bg: #EAEFEF;
   --section-heading-bg: #00BBFF;
+  --simple-font: Arial, Helvetica, sans-serif;
 }
 
 /* Whole page */
 #root {
   min-height: 100vh;
   display: flex;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Left side - inputs */
@@ -29,6 +31,15 @@
 .left-side section {
   background-color: var(--section-bg);
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.left-side section h2 {
+  background-color: var(--section-heading-bg);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
 }
 
 /* Right side - CV */
