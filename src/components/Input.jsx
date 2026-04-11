@@ -1,6 +1,6 @@
 function Input({type, id, htmlID, label, value, onChange, level, workID}) {
   return (
-    <div>
+    <div className="input-data-container">
       <label htmlFor={htmlID}>{label}:</label>
       <input type={type}
              value={value} 
