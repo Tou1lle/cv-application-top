@@ -63,6 +63,17 @@
   max-width: 80%;
 }
 
+/* Education section - more specific styling */
+.education.inputs-container {
+  gap: calc(var(--inputs-container-padding) * 2);
+}
+
+.education.inputs-container > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--inputs-container-padding);
+}
+
 input {
   width: 15em;
   height: 20px;
