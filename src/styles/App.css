@@ -51,6 +51,13 @@
   gap: var(--inputs-container-padding);
 }
 
+.input-data-container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 60%;
+  max-width: 70%;
+}
+
 /* Right side - CV */
 .right-side {
   flex: 1;
