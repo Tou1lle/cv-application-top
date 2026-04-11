@@ -30,12 +30,14 @@
   gap: 20px;
 }
 
+/* Container for general, school and work inputs */
 .left-side section {
   background-color: var(--section-bg);
   border-radius: 10px;
   overflow: hidden;
 }
 
+/* Header of specific data based on section */
 .left-side section h2 {
   background-color: var(--section-heading-bg);
   text-align: center;
@@ -44,6 +46,7 @@
   padding: 10px;
 }
 
+/* Container of several inputs */
 .inputs-container {
   padding: var(--inputs-container-padding);
   display: flex;
@@ -51,11 +54,30 @@
   gap: var(--inputs-container-padding);
 }
 
+/* Container of label-input pair */
 .input-data-container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   min-width: 60%;
-  max-width: 70%;
+  max-width: 80%;
+}
+
+input {
+  width: 15em;
+  height: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--section-bg);
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--section-heading-bg);
+}
+
+label {
+  font-weight: 550;
 }
 
 /* Right side - CV */
