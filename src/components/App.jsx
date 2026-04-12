@@ -85,7 +85,7 @@ export default function App() {
         {console.table(workData)}
       </div>
       <div className="right-side">
-        <section>
+        <section className="a4-sheet">
           <GeneralInfo data={generalData}/>
           <EducationInfo data={educationData} />
           <WorkInfo data={workData} />

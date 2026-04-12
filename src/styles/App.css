@@ -12,6 +12,8 @@
   --inputs-container-padding: 15px;
   --side-sections-padding: 20px;
   --btn-delete-red: #FF0000;
+  --a4-width: 794px;
+  --a4-height: 1123px;
 }
 
 /* Whole page */
@@ -152,3 +154,15 @@ label {
   flex: 1;
   padding: var(--side-sections-padding);
 }
+
+.a4-sheet {
+  width: var(--a4-width);
+  min-height: var(--a4-height);
+  border: 1px solid black;
+  padding: 2em;
+}
+
+.a4-sheet h2 {
+  text-align: center;
+}
+

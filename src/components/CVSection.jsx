@@ -5,6 +5,7 @@ function GeneralInfo({data}) {
   return (
     <section>
       <h2>General Information</h2>
+      <hr />
       <div>
         <p><span>Name:</span> {data.firstName + " " + data.lastName}</p>
         <p><span>Date of Birth:</span> {data.birthday ? format(data.birthday, "yyyy-MM-dd") : ""}</p>
@@ -19,6 +20,7 @@ function EducationInfo({data}) {
   return (
     <section>
       <h2>Education</h2>
+      <hr />
       <div>
         {data.map(school => (
           <div>
@@ -36,6 +38,7 @@ function WorkInfo({data}) {
   return (
     <section>
       <h2>Work Experience</h2>
+      <hr />
       <div>
         {data.map(work => (
           <div>
