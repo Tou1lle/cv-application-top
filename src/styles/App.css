@@ -102,6 +102,25 @@ label {
   font-weight: 550;
 }
 
+.add-work-btn {
+  display: block;
+  margin: auto;
+  margin-bottom: var(--side-sections-padding);
+  padding: 15px 30px;
+  border: 1px solid var(--section-bg);
+  background-color: var(--section-heading-bg);
+  color: white;
+  font-weight: 550;
+  border-radius: 10px;
+}
+
+.add-work-btn:hover {
+  cursor: pointer;
+  border: 1px solid var(--section-heading-bg);
+  color: var(--section-heading-bg);
+  background-color: var(--section-bg);
+}
+
 /* Right side - CV */
 .right-side {
   flex: 1;

@@ -127,7 +127,7 @@ export default function InputSection({type, data, onChange, onAdd}) {
             </div>
           ))}
         </section>
-        <button onClick={onAdd}>Add Work Experience</button>
+        <button onClick={onAdd} className="add-work-btn">Add Work Experience</button>
       </section>
     )
   }
