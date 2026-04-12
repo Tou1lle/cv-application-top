@@ -90,6 +90,7 @@ textarea {
   border: 1px solid var(--section-bg);
   border-radius: 5px;
   height: 15em;
+  padding: 5px;
 }
 
 input:focus,
