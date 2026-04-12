@@ -85,7 +85,7 @@ export default function InputSection({type, data, onChange, onAdd}) {
         <h2>Work Experience</h2>
         <section className="work inputs-container">
           {data.map((work, id) => (
-            <div key={work.id}>
+            <div key={work.id} className="work-container">
               <h3>Practical Experience {id + 1}</h3>
               <Input
                 workID={work.id}
@@ -124,6 +124,7 @@ export default function InputSection({type, data, onChange, onAdd}) {
                 label="Ending date"
                 value={work.endDate && format(work.endDate, "yyyy-MM-dd")}
                 onChange={onChange}/>
+                <button className="delete-work">Delete</button>
             </div>
           ))}
         </section>

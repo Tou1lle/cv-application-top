@@ -11,6 +11,7 @@
   --simple-font: Arial, Helvetica, sans-serif;
   --inputs-container-padding: 15px;
   --side-sections-padding: 20px;
+  --btn-delete-red: #FF0000;
 }
 
 /* Whole page */
@@ -74,6 +75,30 @@
   display: flex;
   flex-direction: column;
   gap: var(--inputs-container-padding);
+}
+
+/* Work container - delete button */
+.work-container {
+  position: relative;
+}
+
+.delete-work {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: 500;
+  padding: 5px 10px;
+  border: 1px solid var(--section-bg);
+  background-color: var(--btn-delete-red);
+  color: white;
+  border-radius: 5px;
+}
+
+.delete-work:hover {
+  cursor: pointer;
+  border: 1px solid var(--btn-delete-red);
+  background-color: var(--section-bg);
+  color: var(--btn-delete-red);
 }
 
 /* HTML form elements */
