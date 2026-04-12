@@ -70,12 +70,16 @@ export default function App() {
     ])
   }
 
+  function handleDeleteWork(buttonID) {
+    setWorkData(workData.filter(work => work.id !== buttonID));
+  }
+
   return (
     <>
       <div className="left-side">
         <InputSection type="general" data={generalData} onChange={handleGeneralUpdate} />
         <InputSection type="education" data={educationData} onChange={handleEducationUpdate} />
-        <InputSection type="work" data={workData} onChange={handleWorkUpdate} onAdd={handleAddWork} />
+        <InputSection type="work" data={workData} onChange={handleWorkUpdate} onAdd={handleAddWork} onDelete={handleDeleteWork}/>
         {console.log("updated data:" + JSON.stringify(generalData))}
         {console.table(educationData)}
         {console.table(workData)}

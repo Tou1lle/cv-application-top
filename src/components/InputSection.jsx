@@ -1,7 +1,7 @@
 import { Input } from "./Input"
 import { format } from "date-fns"
 
-export default function InputSection({type, data, onChange, onAdd}) {
+export default function InputSection({type, data, onChange, onAdd, onDelete}) {
 
   if (type === "general") {
     return (
@@ -124,7 +124,9 @@ export default function InputSection({type, data, onChange, onAdd}) {
                 label="Ending date"
                 value={work.endDate && format(work.endDate, "yyyy-MM-dd")}
                 onChange={onChange}/>
-                <button className="delete-work">Delete</button>
+                <button className="delete-work" data-work-id={work.id} onClick={(e) => {
+                  onDelete(e.target.dataset.workId)
+                }}>Delete</button>
             </div>
           ))}
         </section>
