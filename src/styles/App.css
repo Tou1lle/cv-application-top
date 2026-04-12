@@ -106,7 +106,7 @@ label {
 .add-work-btn {
   display: block;
   margin: auto;
-  margin-bottom: var(--side-sections-padding);
+  margin-bottom: var(--inputs-container-padding);
   padding: 15px 30px;
   border: 1px solid var(--section-bg);
   background-color: var(--section-heading-bg);
@@ -125,4 +125,5 @@ label {
 /* Right side - CV */
 .right-side {
   flex: 1;
+  padding: var(--side-sections-padding);
 }
