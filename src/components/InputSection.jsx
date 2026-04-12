@@ -104,7 +104,10 @@ export default function InputSection({type, data, onChange, onAdd}) {
                 value={work.location}
                 onChange={onChange}
               />
-              <textarea name="work-description" id={"description" + work.id} value={work.description} onChange={e => onChange(e.target.value, "description", null, work.id)}></textarea>
+              <div className="input-data-container">
+                <label htmlFor={"description" + work.id}>Work Description</label>
+                <textarea name="work-description" id={"description" + work.id} value={work.description} onChange={e => onChange(e.target.value, "description", null, work.id)}></textarea>
+              </div>
               <Input
                 workID={work.id}
                 type="date"
